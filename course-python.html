@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>بايثون من الصفر للمبتدئين | freecoursee</title>
+<meta name="description" content="أول خطواتك في البرمجة: المتغيرات، الشروط، الحلقات والدوال، مع أمثلة تشغّلها بنفسك.">
+<meta name="theme-color" content="#0f766e">
+<meta property="og:title" content="بايثون من الصفر للمبتدئين | freecoursee">
+<meta property="og:description" content="أول خطواتك في البرمجة: المتغيرات، الشروط، الحلقات والدوال، مع أمثلة تشغّلها بنفسك.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:site_name" content="freecoursee">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem('fc-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<!-- ===== أكواد جوجل أدسنس: الصق كود AdSense هنا بعد ما تسجل موقعك ===== -->
+</head>
+<body class="course">
+<a class="skip" href="#main">تخطي إلى المحتوى</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html" aria-label="freecoursee الصفحة الرئيسية">
+      <img class="logo" src="logo.png" alt="شعار freecoursee" width="64" height="32">
+      <span class="brand-name">freecoursee</span>
+    </a>
+    <nav class="nav" aria-label="القائمة الرئيسية">
+      <a href="index.html">الرئيسية</a>
+      <a href="index.html#courses">الكورسات</a>
+      <a href="about.html">عن الموقع</a>
+      <a href="privacy.html">الخصوصية</a>
+    </nav>
+    <button id="themeBtn" class="icon-btn" type="button" aria-label="تبديل الوضع الليلي">🌓</button>
+  </div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+<div class="wrap crumbs"><a href="index.html">الرئيسية</a> ‹ <a href="index.html#courses">الكورسات</a> ‹ <span>بايثون من الصفر للمبتدئين</span></div>
+<article class="wrap article" data-course="python">
+  <header class="a-head">
+    <span class="ic big" aria-hidden="true">🐍</span>
+    <h1>بايثون من الصفر للمبتدئين</h1>
+    <p class="lead">بايثون من أسهل لغات البرمجة قراءةً، وتُستخدم في تحليل البيانات وبناء المواقع والأتمتة. في هذا الكورس ستكتب برامج صغيرة حقيقية من أول درس.</p>
+    <div class="meta"><span>برمجة</span><span>مبتدئ</span><span>4 دروس</span><span>حوالي 25 دقيقة</span></div>
+  </header>
+  
+  <nav class="toc" aria-label="محتويات الكورس"><b>محتويات الكورس</b><ol><li><a href="#l1">التثبيت وأول برنامج</a></li><li><a href="#l2">المتغيرات وأنواع البيانات</a></li><li><a href="#l3">الشروط والحلقات</a></li><li><a href="#l4">الدوال والقوائم</a></li></ol></nav>
+  
+<section class="lesson" id="l1">
+<h2><span class="num">1</span>التثبيت وأول برنامج</h2>
+<p>حمّل بايثون من الموقع الرسمي python.org وثبّته، ومن المهم أن تفعّل خيار Add Python to PATH أثناء التثبيت حتى يعمل الأمر من سطر الأوامر. بعد التثبيت افتح محرراً مثل VS Code أو حتى Notepad، واكتب البرنامج الأول:</p>
+<pre><code>print("مرحباً بالعالم")</code></pre>
+<p>احفظ الملف باسم hello.py ثم شغّله من سطر الأوامر بالأمر <code>python hello.py</code>. الدالة print تعرض ما بداخل القوسين على الشاشة، وهي أكثر دالة ستستخدمها وأنت تتعلم لأنها تريك ماذا يحدث داخل برنامجك.</p>
+<p>التعليقات سطور يتجاهلها بايثون وتُكتب لتوضيح الكود للقارئ، وتبدأ بعلامة #:</p>
+<pre><code># هذا تعليق ولن يُنفَّذ
+print(2 + 3)  # الناتج 5</code></pre>
+<p>نصيحة عملية: لا تنسخ الأمثلة فقط، بل غيّر القيم وشاهد ماذا يحدث. الخطأ في هذه المرحلة جزء طبيعي من التعلم، ورسالة الخطأ في بايثون تخبرك عادةً برقم السطر ونوع المشكلة.</p>
+</section>
+
+<section class="lesson" id="l2">
+<h2><span class="num">2</span>المتغيرات وأنواع البيانات</h2>
+<p>المتغير اسم يشير إلى قيمة محفوظة في الذاكرة. تنشئه بالإسناد مباشرة دون كلمة خاصة:</p>
+<pre><code>name = "علي"
+age = 20
+price = 9.99
+is_student = True</code></pre>
+<p>الأنواع الأربعة الأساسية هي: <b>int</b> للأعداد الصحيحة، و<b>float</b> للأعداد العشرية، و<b>str</b> للنصوص، و<b>bool</b> للقيمتين True وFalse. تعرف نوع أي قيمة بالدالة type().</p>
+<p>لقراءة مدخلات من المستخدم استخدم input، وتذكّر أنها تُرجع نصاً دائماً، فإذا أردت رقماً حوّله بـ int():</p>
+<pre><code>x = int(input("اكتب رقماً: "))
+print(f"ضعف الرقم هو {x * 2}")</code></pre>
+<p>الصيغة f"..." تسمح بوضع المتغيرات داخل النص بين أقواس معقوصة، وهي أنظف من جمع النصوص بعلامة +. أسماء المتغيرات حساسة لحالة الأحرف، فـ Age تختلف عن age، والأفضل استخدام أسماء واضحة مثل total_price بدل حرف واحد.</p>
+</section>
+
+<section class="lesson" id="l3">
+<h2><span class="num">3</span>الشروط والحلقات</h2>
+<p>الشروط تجعل البرنامج يتخذ قراراً. في بايثون يحدد الإزاحة (المسافة البادئة) أين تبدأ الكتلة وأين تنتهي، لذلك انتبه لها:</p>
+<pre><code>score = 75
+if score &gt;= 90:
+    print("ممتاز")
+elif score &gt;= 60:
+    print("ناجح")
+else:
+    print("حاول مرة أخرى")</code></pre>
+<p>عوامل المقارنة هي ==  و !=  و &lt; و &gt; و &lt;= و &gt;=، ويمكن الجمع بينها بالكلمات and و or و not.</p>
+<p>الحلقة for تكرر الكود على عناصر متتابعة، والدالة range تولّد الأرقام: range(3) تعطي 0 ثم 1 ثم 2 (تبدأ من الصفر وتتوقف قبل الرقم الأخير).</p>
+<pre><code>for i in range(1, 4):
+    print("الجولة", i)
+
+n = 3
+while n &gt; 0:
+    print(n)
+    n -= 1</code></pre>
+<p>الحلقة while تستمر ما دام الشرط صحيحاً، فاحرص أن يتغير شيء داخلها ليصبح الشرط خاطئاً في وقت ما، وإلا ستدور للأبد.</p>
+</section>
+
+<section class="lesson" id="l4">
+<h2><span class="num">4</span>الدوال والقوائم</h2>
+<p>الدالة مجموعة أوامر تعطيها اسماً لتستدعيها متى شئت بدل تكرار الكود. تُعرَّف بالكلمة def وتُرجع نتيجة بـ return:</p>
+<pre><code>def area(width, height):
+    return width * height
+
+print(area(4, 5))   # 20</code></pre>
+<p>القائمة (list) تحفظ عدة قيم بترتيب، وتُكتب بين أقواس مربعة، ويبدأ ترقيم عناصرها من صفر:</p>
+<pre><code>fruits = ["تفاح", "موز"]
+fruits.append("برتقال")
+print(fruits[0])      # تفاح
+print(len(fruits))    # 3
+for f in fruits:
+    print(f)</code></pre>
+<p>أما القاموس (dict) فيربط مفتاحاً بقيمة، مثل <code>{"name": "علي", "age": 20}</code>، وتصل للقيمة بمفتاحها: <code>person["name"]</code>.</p>
+<p>بعد هذه الدروس أنت قادر على كتابة برامج مثل: حاسبة بسيطة، أو لعبة تخمين رقم، أو برنامج يحسب معدل درجات. أفضل طريقة للتقدم أن تختار مشروعاً صغيراً وتبنيه خطوة خطوة.</p>
+</section>
+
+  <div class="finish">
+    <h2>أنهيت الكورس؟</h2>
+    <p>أحسنت. ثبّت ما تعلمته بتطبيق عملي صغير، ثم إن أحببت اختبر نفسك بالأسئلة التالية. الاختبار اختياري.</p>
+    <div class="actions">
+      <button id="doneBtn" class="btn ghost" type="button">تمت قراءة الكورس ✓</button>
+      <button id="startQuiz" class="btn" type="button">ابدأ الاختبار (اختياري)</button>
+    </div>
+  </div>
+  <section id="quizBox" class="quiz" hidden aria-live="polite"></section>
+
+  <aside class="more">
+    <h2>كورسات أخرى قد تهمك</h2>
+    <ul class="plain more-list"><li><a href="course-javascript.html">⚡ جافاسكربت للمبتدئين</a></li><li><a href="course-english.html">🗣️ الإنجليزية: أساسيات المحادثة اليومية</a></li><li><a href="course-excel.html">📊 إكسل: من الخلايا إلى الجداول المحورية</a></li><li><a href="course-html.html">🧱 HTML: بناء أول صفحة ويب</a></li><li><a href="course-css.html">🎨 CSS: تصميم صفحات جميلة ومتجاوبة</a></li><li><a href="course-forex.html">💹 أساسيات الفوركس وإدارة المخاطر</a></li><li><a href="course-marketing.html">📈 التسويق الرقمي: من الفكرة إلى القياس</a></li></ul>
+  </aside>
+</article>
+</main>
+<script>window.QUIZ=[{"q": "ما الدالة التي تعرض نصاً على الشاشة في بايثون؟", "o": ["show()", "print()", "echo()", "write()"], "a": 1, "e": "الدالة print هي المستخدمة لعرض القيم على الشاشة."}, {"q": "كيف يحدد بايثون بداية الكتلة البرمجية ونهايتها؟", "o": ["بالأقواس المعقوصة", "بكلمة end", "بالإزاحة (المسافة البادئة)", "بالفاصلة المنقوطة"], "a": 2, "e": "بايثون يعتمد على الإزاحة بدل الأقواس المعقوصة."}, {"q": "ماذا ينتج عن range(3)؟", "o": ["1 ثم 2 ثم 3", "0 ثم 1 ثم 2", "0 ثم 1 ثم 2 ثم 3", "3 فقط"], "a": 1, "e": "تبدأ range من الصفر وتتوقف قبل الرقم المحدد."}, {"q": "ما الكلمة المستخدمة لتعريف دالة؟", "o": ["function", "func", "define", "def"], "a": 3, "e": "التعريف يتم بالكلمة def."}, {"q": "ما نوع البيانات الناتج عن input() دائماً؟", "o": ["int", "float", "str", "bool"], "a": 2, "e": "input تُرجع نصاً دائماً، ولذلك نحوّلها بـ int عند الحاجة."}];</script>
+
+<footer class="site-footer">
+  <div class="wrap foot-grid">
+    <div>
+      <div class="foot-brand">freecoursee</div>
+      <p class="muted">منصة دروس مجانية مكتوبة بالعربية، مع اختبارات اختيارية لقياس فهمك.</p>
+    </div>
+    <div>
+      <div class="foot-title">روابط</div>
+      <ul class="plain">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">عن الموقع</a></li>
+        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+        <li><a href="privacy.html#contact">اتصل بنا</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap copy">© 2026 freecoursee — جميع الحقوق محفوظة</div>
+</footer>
+<script src="app.js" defer></script>
+</body>
+</html>

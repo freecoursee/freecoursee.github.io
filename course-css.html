@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSS: تصميم صفحات جميلة ومتجاوبة | freecoursee</title>
+<meta name="description" content="المحددات، نموذج الصندوق، Flexbox والتصميم المتجاوب مع الجوال.">
+<meta name="theme-color" content="#0f766e">
+<meta property="og:title" content="CSS: تصميم صفحات جميلة ومتجاوبة | freecoursee">
+<meta property="og:description" content="المحددات، نموذج الصندوق، Flexbox والتصميم المتجاوب مع الجوال.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:site_name" content="freecoursee">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem('fc-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<!-- ===== أكواد جوجل أدسنس: الصق كود AdSense هنا بعد ما تسجل موقعك ===== -->
+</head>
+<body class="course">
+<a class="skip" href="#main">تخطي إلى المحتوى</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html" aria-label="freecoursee الصفحة الرئيسية">
+      <img class="logo" src="logo.png" alt="شعار freecoursee" width="64" height="32">
+      <span class="brand-name">freecoursee</span>
+    </a>
+    <nav class="nav" aria-label="القائمة الرئيسية">
+      <a href="index.html">الرئيسية</a>
+      <a href="index.html#courses">الكورسات</a>
+      <a href="about.html">عن الموقع</a>
+      <a href="privacy.html">الخصوصية</a>
+    </nav>
+    <button id="themeBtn" class="icon-btn" type="button" aria-label="تبديل الوضع الليلي">🌓</button>
+  </div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+<div class="wrap crumbs"><a href="index.html">الرئيسية</a> ‹ <a href="index.html#courses">الكورسات</a> ‹ <span>CSS: تصميم صفحات جميلة ومتجاوبة</span></div>
+<article class="wrap article" data-course="css">
+  <header class="a-head">
+    <span class="ic big" aria-hidden="true">🎨</span>
+    <h1>CSS: تصميم صفحات جميلة ومتجاوبة</h1>
+    <p class="lead">إذا كانت HTML هي الهيكل فـ CSS هي الشكل: الألوان والخطوط والمسافات والتخطيط. ستتعلم الأساسيات التي تحتاجها لبناء صفحة مرتبة تعمل على الجوال والحاسوب.</p>
+    <div class="meta"><span>برمجة</span><span>مبتدئ</span><span>4 دروس</span><span>حوالي 20 دقيقة</span></div>
+  </header>
+  
+  <nav class="toc" aria-label="محتويات الكورس"><b>محتويات الكورس</b><ol><li><a href="#l1">كيف تعمل CSS</a></li><li><a href="#l2">نموذج الصندوق</a></li><li><a href="#l3">Flexbox للتخطيط</a></li><li><a href="#l4">التصميم المتجاوب</a></li></ol></nav>
+  
+<section class="lesson" id="l1">
+<h2><span class="num">1</span>كيف تعمل CSS</h2>
+<p>قاعدة CSS تتكون من محدد (يختار العناصر) وخصائص (تصف الشكل):</p>
+<pre><code>p {
+  color: #333;
+  font-size: 18px;
+}</code></pre>
+<p>أفضل طريقة لإضافتها ملف خارجي تربطه في head:</p>
+<pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+<p>أنواع المحددات الأساسية: محدد الوسم (p)، ومحدد الصنف ويبدأ بنقطة (<code>.card</code>)، ومحدد المعرّف ويبدأ بعلامة # (<code>#header</code>). الأصناف قابلة للتكرار على أي عدد من العناصر فهي الأكثر استخداماً، أما المعرّف فيجب أن يكون فريداً في الصفحة.</p>
+<p>عند تعارض قاعدتين يفوز الأكثر تحديداً، ثم الأحدث في الترتيب. فلو ضبطت لوناً بالصنف ولوناً بالوسم، يفوز الصنف. ويمكنك تعريف متغيرات للألوان لتغيير الموقع كله من مكان واحد:</p>
+<pre><code>:root { --main: #0f766e; }
+a { color: var(--main); }</code></pre>
+</section>
+
+<section class="lesson" id="l2">
+<h2><span class="num">2</span>نموذج الصندوق</h2>
+<p>كل عنصر في الصفحة صندوق مكوّن من أربع طبقات من الداخل للخارج: المحتوى (content)، ثم الحشو (padding) وهو مسافة داخلية بين المحتوى والحدود، ثم الحدود (border)، ثم الهامش (margin) وهو مسافة خارجية بين العنصر وجيرانه.</p>
+<pre><code>.box {
+  width: 300px;
+  padding: 16px;
+  border: 1px solid #ccc;
+  margin: 20px auto;
+}</code></pre>
+<p>مشكلة شائعة: عرض العنصر الفعلي يصبح 300 + حشو + حدود، فيطلع أكبر مما تريد. الحل المعتمد في أغلب المواقع أن تكتب في أول ملفك:</p>
+<pre><code>* { box-sizing: border-box; }</code></pre>
+<p>وبذلك يدخل الحشو والحدود ضمن العرض المحدد، فيصبح حساب الأبعاد بسيطاً. والقيمة <code>margin: 0 auto</code> مع عرض محدد تضع العنصر في منتصف الصفحة أفقياً.</p>
+</section>
+
+<section class="lesson" id="l3">
+<h2><span class="num">3</span>Flexbox للتخطيط</h2>
+<p>Flexbox يرتب العناصر في صف أو عمود بمرونة ويوزع المسافات تلقائياً. يكفي أن تضع <code>display: flex</code> على العنصر الأب:</p>
+<pre><code>.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}</code></pre>
+<p>الخاصية <b>justify-content</b> تتحكم بالتوزيع على المحور الرئيسي (أفقي افتراضياً): center للمنتصف، space-between لأقصى الجانبين مع مسافات متساوية بينهما. والخاصية <b>align-items</b> تتحكم بالمحور المقابل (عمودي)، وgap تضع مسافة بين العناصر، وflex-wrap يسمح بنزول العناصر لسطر جديد عند ضيق المساحة.</p>
+<p>وللشبكات المتعددة الأعمدة مثل صفحة بطاقات استخدم Grid:</p>
+<pre><code>.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 18px;
+}</code></pre>
+<p>هذا السطر يعرض أكبر عدد ممكن من البطاقات في الصف، ويقلل الأعمدة تلقائياً على الجوال دون أي كود إضافي.</p>
+</section>
+
+<section class="lesson" id="l4">
+<h2><span class="num">4</span>التصميم المتجاوب</h2>
+<p>أكثر زوار المواقع اليوم يتصفحون من الجوال، لذلك يجب أن تتكيف صفحتك مع أي حجم شاشة. أول خطوة وسم viewport في head، وبدونه تُعرض الصفحة بعرض سطح المكتب مصغّراً:</p>
+<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code></pre>
+<p>ثانياً: استخدم وحدات مرنة بدل الثابتة. النسبة المئوية و rem و max-width أفضل من العرض الثابت بالبكسل. ولجعل الصور لا تتجاوز حاويتها:</p>
+<pre><code>img { max-width: 100%; height: auto; }</code></pre>
+<p>ثالثاً: استعلامات الوسائط (Media Queries) لتغيير التنسيق عند عرض معين:</p>
+<pre><code>.sidebar { width: 30%; }
+@media (max-width: 700px) {
+  .sidebar { width: 100%; }
+}</code></pre>
+<p>نصيحة: صمّم أولاً للجوال ثم وسّع للشاشات الأكبر، فهذا غالباً أبسط. واختبر الموقع بأدوات المطور في المتصفح (F12 ثم أيقونة الجوال) قبل نشره.</p>
+</section>
+
+  <div class="finish">
+    <h2>أنهيت الكورس؟</h2>
+    <p>أحسنت. ثبّت ما تعلمته بتطبيق عملي صغير، ثم إن أحببت اختبر نفسك بالأسئلة التالية. الاختبار اختياري.</p>
+    <div class="actions">
+      <button id="doneBtn" class="btn ghost" type="button">تمت قراءة الكورس ✓</button>
+      <button id="startQuiz" class="btn" type="button">ابدأ الاختبار (اختياري)</button>
+    </div>
+  </div>
+  <section id="quizBox" class="quiz" hidden aria-live="polite"></section>
+
+  <aside class="more">
+    <h2>كورسات أخرى قد تهمك</h2>
+    <ul class="plain more-list"><li><a href="course-python.html">🐍 بايثون من الصفر للمبتدئين</a></li><li><a href="course-javascript.html">⚡ جافاسكربت للمبتدئين</a></li><li><a href="course-english.html">🗣️ الإنجليزية: أساسيات المحادثة اليومية</a></li><li><a href="course-excel.html">📊 إكسل: من الخلايا إلى الجداول المحورية</a></li><li><a href="course-html.html">🧱 HTML: بناء أول صفحة ويب</a></li><li><a href="course-forex.html">💹 أساسيات الفوركس وإدارة المخاطر</a></li><li><a href="course-marketing.html">📈 التسويق الرقمي: من الفكرة إلى القياس</a></li></ul>
+  </aside>
+</article>
+</main>
+<script>window.QUIZ=[{"q": "أي خاصية تضيف مسافة داخلية بين المحتوى والحدود؟", "o": ["margin", "padding", "gap", "spacing"], "a": 1, "e": "padding هو الحشو الداخلي."}, {"q": "بأي رمز يبدأ محدد الصنف (class)؟", "o": ["#", ".", "@", "\u0026"], "a": 1, "e": "الأصناف تبدأ بنقطة مثل .card."}, {"q": "ما فائدة display: flex؟", "o": ["إخفاء العنصر", "ترتيب العناصر الداخلية في صف أو عمود بمرونة", "تكبير الخط", "تغيير اللون"], "a": 1, "e": "Flexbox أداة تخطيط مرنة."}, {"q": "لماذا نضيف وسم viewport؟", "o": ["لتغيير اللون", "ليتكيف عرض الصفحة مع شاشة الجوال", "لتسريع الإنترنت", "لإضافة صور"], "a": 1, "e": "بدونه يعرض الجوال الصفحة بعرض سطح المكتب."}, {"q": "ماذا يفعل box-sizing: border-box؟", "o": ["يخفي الحدود", "يُدخل الحشو والحدود ضمن العرض المحدد", "يضيف ظلاً", "يلغي الهوامش"], "a": 1, "e": "يصبح العرض المحدد هو العرض النهائي الفعلي."}];</script>
+
+<footer class="site-footer">
+  <div class="wrap foot-grid">
+    <div>
+      <div class="foot-brand">freecoursee</div>
+      <p class="muted">منصة دروس مجانية مكتوبة بالعربية، مع اختبارات اختيارية لقياس فهمك.</p>
+    </div>
+    <div>
+      <div class="foot-title">روابط</div>
+      <ul class="plain">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">عن الموقع</a></li>
+        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+        <li><a href="privacy.html#contact">اتصل بنا</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap copy">© 2026 freecoursee — جميع الحقوق محفوظة</div>
+</footer>
+<script src="app.js" defer></script>
+</body>
+</html>

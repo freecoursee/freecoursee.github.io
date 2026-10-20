@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HTML: بناء أول صفحة ويب | freecoursee</title>
+<meta name="description" content="الوسوم الأساسية، الروابط والصور والقوائم، الجداول والنماذج وبنية الصفحة الصحيحة.">
+<meta name="theme-color" content="#0f766e">
+<meta property="og:title" content="HTML: بناء أول صفحة ويب | freecoursee">
+<meta property="og:description" content="الوسوم الأساسية، الروابط والصور والقوائم، الجداول والنماذج وبنية الصفحة الصحيحة.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:site_name" content="freecoursee">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem('fc-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<!-- ===== أكواد جوجل أدسنس: الصق كود AdSense هنا بعد ما تسجل موقعك ===== -->
+</head>
+<body class="course">
+<a class="skip" href="#main">تخطي إلى المحتوى</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html" aria-label="freecoursee الصفحة الرئيسية">
+      <img class="logo" src="logo.png" alt="شعار freecoursee" width="64" height="32">
+      <span class="brand-name">freecoursee</span>
+    </a>
+    <nav class="nav" aria-label="القائمة الرئيسية">
+      <a href="index.html">الرئيسية</a>
+      <a href="index.html#courses">الكورسات</a>
+      <a href="about.html">عن الموقع</a>
+      <a href="privacy.html">الخصوصية</a>
+    </nav>
+    <button id="themeBtn" class="icon-btn" type="button" aria-label="تبديل الوضع الليلي">🌓</button>
+  </div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+<div class="wrap crumbs"><a href="index.html">الرئيسية</a> ‹ <a href="index.html#courses">الكورسات</a> ‹ <span>HTML: بناء أول صفحة ويب</span></div>
+<article class="wrap article" data-course="html">
+  <header class="a-head">
+    <span class="ic big" aria-hidden="true">🧱</span>
+    <h1>HTML: بناء أول صفحة ويب</h1>
+    <p class="lead">HTML هي الهيكل الذي تقوم عليه كل صفحات الويب. إذا أردت تصميم موقع فهذه نقطة البداية الطبيعية قبل CSS وجافاسكربت.</p>
+    <div class="meta"><span>برمجة</span><span>مبتدئ</span><span>4 دروس</span><span>حوالي 18 دقيقة</span></div>
+  </header>
+  
+  <nav class="toc" aria-label="محتويات الكورس"><b>محتويات الكورس</b><ol><li><a href="#l1">ما هي HTML ومن أين نبدأ</a></li><li><a href="#l2">هيكل الصفحة الأساسي</a></li><li><a href="#l3">الروابط والصور والقوائم</a></li><li><a href="#l4">الجداول والنماذج والوسوم الدلالية</a></li></ol></nav>
+  
+<section class="lesson" id="l1">
+<h2><span class="num">1</span>ما هي HTML ومن أين نبدأ</h2>
+<p>HTML اختصار HyperText Markup Language، وهي لغة ترميز تصف محتوى الصفحة: هذا عنوان، وهذه فقرة، وهذه صورة، وهذا رابط. لا تُعد لغة برمجة لأنها لا تحتوي على عمليات حسابية أو شروط.</p>
+<p>المتصفح يقرأ ملف HTML ويحوله إلى صفحة مرئية. لا تحتاج إلى برنامج خاص، يكفي Notepad أو محرر مجاني مثل VS Code. احفظ الملف بامتداد .html ثم افتحه بالمتصفح.</p>
+<p>الأساس هو الوسوم (Tags). للوسم غالباً وسم فتح ووسم إغلاق وبينهما المحتوى:</p>
+<pre><code>&lt;p&gt;مرحباً بك في أول صفحة لي&lt;/p&gt;</code></pre>
+<p>الوسم p يعني فقرة. بعض الوسوم لا يحتاج إغلاقاً مثل img وbr. ويمكن إضافة خصائص (Attributes) داخل وسم الفتح مثل <code>href</code> في الروابط و<code>src</code> في الصور.</p>
+</section>
+
+<section class="lesson" id="l2">
+<h2><span class="num">2</span>هيكل الصفحة الأساسي</h2>
+<p>كل صفحة صحيحة تتبع هذا الهيكل:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ar" dir="rtl"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;title&gt;عنوان الصفحة&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;العنوان الرئيسي&lt;/h1&gt;
+  &lt;p&gt;فقرة نصية.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>الجزء head يحتوي معلومات عن الصفحة لا تظهر في المحتوى مثل العنوان الذي يظهر في تبويب المتصفح وترميز الحروف، أما body فهو ما يراه الزائر. الوسم <code>lang="ar" dir="rtl"</code> يخبر المتصفح أن الصفحة عربية وتُقرأ من اليمين.</p>
+<p>العناوين من h1 إلى h6 مرتبة حسب الأهمية. استخدم h1 واحداً فقط للصفحة، وh2 للأقسام الرئيسية وهكذا، فهذا يساعد القارئ ومحركات البحث وقارئات الشاشة.</p>
+</section>
+
+<section class="lesson" id="l3">
+<h2><span class="num">3</span>الروابط والصور والقوائم</h2>
+<p><b>الرابط</b> يُنشأ بالوسم a والخاصية href:</p>
+<pre><code>&lt;a href="https://example.com"&gt;زيارة الموقع&lt;/a&gt;
+&lt;a href="about.html"&gt;عن الموقع&lt;/a&gt;</code></pre>
+<p>المسار النسبي (about.html) يشير لملف في نفس الموقع، والمسار الكامل (https://...) يشير لموقع خارجي.</p>
+<p><b>الصورة</b> بالوسم img، ومعه نص بديل مهم لقارئات الشاشة ولحالة تعذر التحميل:</p>
+<pre><code>&lt;img src="assets/logo.png" alt="شعار الموقع"&gt;</code></pre>
+<p><b>القوائم:</b> ul للقائمة النقطية وol للمرقمة، وكل عنصر بوسم li:</p>
+<pre><code>&lt;ul&gt;
+  &lt;li&gt;الأول&lt;/li&gt;
+  &lt;li&gt;الثاني&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<p>تنبيه شائع: أسماء الملفات حساسة لحالة الأحرف على كثير من الخوادم، فالملف Logo.png يختلف عن logo.png. هذا من أكثر أسباب فشل ظهور الصور بعد رفع الموقع، فاستخدم أحرفاً صغيرة وبدون مسافات في أسماء الملفات.</p>
+</section>
+
+<section class="lesson" id="l4">
+<h2><span class="num">4</span>الجداول والنماذج والوسوم الدلالية</h2>
+<p>الجدول يُستخدم للبيانات الجدولية فقط وليس لتصميم الصفحة:</p>
+<pre><code>&lt;table&gt;
+  &lt;tr&gt;&lt;th&gt;الاسم&lt;/th&gt;&lt;th&gt;الدرجة&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;أحمد&lt;/td&gt;&lt;td&gt;90&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+<p>النموذج لجمع بيانات الزائر. اربط كل حقل بـ label ليسهل الضغط والوصول:</p>
+<pre><code>&lt;form&gt;
+  &lt;label for="email"&gt;البريد&lt;/label&gt;
+  &lt;input type="email" id="email" required&gt;
+  &lt;button type="submit"&gt;إرسال&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+<p>أخيراً استخدم الوسوم الدلالية لتعبّر عن معنى الأجزاء: header للرأس، nav للتنقل، main للمحتوى الأساسي، article للمقال، footer للتذييل. تعطي هذه الوسوم بنية أوضح لمحركات البحث من استخدام div في كل مكان.</p>
+</section>
+
+  <div class="finish">
+    <h2>أنهيت الكورس؟</h2>
+    <p>أحسنت. ثبّت ما تعلمته بتطبيق عملي صغير، ثم إن أحببت اختبر نفسك بالأسئلة التالية. الاختبار اختياري.</p>
+    <div class="actions">
+      <button id="doneBtn" class="btn ghost" type="button">تمت قراءة الكورس ✓</button>
+      <button id="startQuiz" class="btn" type="button">ابدأ الاختبار (اختياري)</button>
+    </div>
+  </div>
+  <section id="quizBox" class="quiz" hidden aria-live="polite"></section>
+
+  <aside class="more">
+    <h2>كورسات أخرى قد تهمك</h2>
+    <ul class="plain more-list"><li><a href="course-python.html">🐍 بايثون من الصفر للمبتدئين</a></li><li><a href="course-javascript.html">⚡ جافاسكربت للمبتدئين</a></li><li><a href="course-english.html">🗣️ الإنجليزية: أساسيات المحادثة اليومية</a></li><li><a href="course-excel.html">📊 إكسل: من الخلايا إلى الجداول المحورية</a></li><li><a href="course-css.html">🎨 CSS: تصميم صفحات جميلة ومتجاوبة</a></li><li><a href="course-forex.html">💹 أساسيات الفوركس وإدارة المخاطر</a></li><li><a href="course-marketing.html">📈 التسويق الرقمي: من الفكرة إلى القياس</a></li></ul>
+  </aside>
+</article>
+</main>
+<script>window.QUIZ=[{"q": "أي وسم يُستخدم لإنشاء رابط؟", "o": ["\u003ca\u003e", "\u003clink\u003e", "\u003chref\u003e", "\u003curl\u003e"], "a": 0, "e": "الوسم a مع الخاصية href."}, {"q": "أين يظهر محتوى الوسم title؟", "o": ["في أعلى الصفحة داخل المحتوى", "في تبويب المتصفح", "في أسفل الصفحة", "لا يظهر أبداً"], "a": 1, "e": "عنوان الصفحة يظهر في تبويب المتصفح ونتائج البحث."}, {"q": "ما فائدة الخاصية alt في الصورة؟", "o": ["تغيير الحجم", "نص بديل لقارئات الشاشة وعند تعذر التحميل", "تغيير اللون", "ربط الصورة برابط"], "a": 1, "e": "النص البديل مهم للوصولية وللحالات التي لا تُحمَّل فيها الصورة."}, {"q": "أي وسم ينشئ قائمة مرقمة؟", "o": ["ul", "li", "ol", "dl"], "a": 2, "e": "ol للقائمة المرقمة وul للنقطية."}, {"q": "HTML تُصنف على أنها:", "o": ["لغة برمجة", "لغة ترميز", "قاعدة بيانات", "نظام تشغيل"], "a": 1, "e": "هي لغة ترميز تصف بنية المحتوى."}];</script>
+
+<footer class="site-footer">
+  <div class="wrap foot-grid">
+    <div>
+      <div class="foot-brand">freecoursee</div>
+      <p class="muted">منصة دروس مجانية مكتوبة بالعربية، مع اختبارات اختيارية لقياس فهمك.</p>
+    </div>
+    <div>
+      <div class="foot-title">روابط</div>
+      <ul class="plain">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">عن الموقع</a></li>
+        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+        <li><a href="privacy.html#contact">اتصل بنا</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap copy">© 2026 freecoursee — جميع الحقوق محفوظة</div>
+</footer>
+<script src="app.js" defer></script>
+</body>
+</html>

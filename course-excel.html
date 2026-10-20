@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>إكسل: من الخلايا إلى الجداول المحورية | freecoursee</title>
+<meta name="description" content="الصيغ والدوال الأكثر طلباً في العمل، وتلخيص البيانات بالجداول المحورية والرسوم.">
+<meta name="theme-color" content="#0f766e">
+<meta property="og:title" content="إكسل: من الخلايا إلى الجداول المحورية | freecoursee">
+<meta property="og:description" content="الصيغ والدوال الأكثر طلباً في العمل، وتلخيص البيانات بالجداول المحورية والرسوم.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:site_name" content="freecoursee">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem('fc-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<!-- ===== أكواد جوجل أدسنس: الصق كود AdSense هنا بعد ما تسجل موقعك ===== -->
+</head>
+<body class="course">
+<a class="skip" href="#main">تخطي إلى المحتوى</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html" aria-label="freecoursee الصفحة الرئيسية">
+      <img class="logo" src="logo.png" alt="شعار freecoursee" width="64" height="32">
+      <span class="brand-name">freecoursee</span>
+    </a>
+    <nav class="nav" aria-label="القائمة الرئيسية">
+      <a href="index.html">الرئيسية</a>
+      <a href="index.html#courses">الكورسات</a>
+      <a href="about.html">عن الموقع</a>
+      <a href="privacy.html">الخصوصية</a>
+    </nav>
+    <button id="themeBtn" class="icon-btn" type="button" aria-label="تبديل الوضع الليلي">🌓</button>
+  </div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+<div class="wrap crumbs"><a href="index.html">الرئيسية</a> ‹ <a href="index.html#courses">الكورسات</a> ‹ <span>إكسل: من الخلايا إلى الجداول المحورية</span></div>
+<article class="wrap article" data-course="excel">
+  <header class="a-head">
+    <span class="ic big" aria-hidden="true">📊</span>
+    <h1>إكسل: من الخلايا إلى الجداول المحورية</h1>
+    <p class="lead">إكسل مهارة مطلوبة في أغلب الوظائف المكتبية والمحاسبية. هذا الكورس يركز على ما ستستخدمه فعلاً كل يوم بدل شرح كل زر في البرنامج.</p>
+    <div class="meta"><span>مهارات</span><span>مبتدئ</span><span>4 دروس</span><span>حوالي 22 دقيقة</span></div>
+  </header>
+  
+  <nav class="toc" aria-label="محتويات الكورس"><b>محتويات الكورس</b><ol><li><a href="#l1">الواجهة والخلايا</a></li><li><a href="#l2">الصيغ الأساسية</a></li><li><a href="#l3">دوال الشروط والبحث</a></li><li><a href="#l4">الفرز والتصفية والجداول المحورية</a></li></ol></nav>
+  
+<section class="lesson" id="l1">
+<h2><span class="num">1</span>الواجهة والخلايا</h2>
+<p>ملف إكسل يسمى مصنفاً (Workbook) ويحتوي على أوراق (Sheets)، وكل ورقة شبكة من الخلايا. تُعرَّف الخلية بعمودها وصفها، مثل A1 (العمود A والصف 1). النطاق يكتب هكذا: A1:A10.</p>
+<p>أشياء صغيرة توفر وقتاً كبيراً:</p>
+<ul>
+<li><b>التعبئة التلقائية:</b> اسحب المربع الصغير في زاوية الخلية لنسخ القيمة أو إكمال سلسلة (أرقام، أيام، أشهر).</li>
+<li><b>تجميد الأجزاء (Freeze Panes):</b> ليبقى صف العناوين ظاهراً أثناء التمرير.</li>
+<li><b>تنسيق كجدول (Format as Table):</b> يضيف فلاتر وألواناً ويوسّع الصيغ تلقائياً مع الصفوف الجديدة.</li>
+<li><b>اختصارات:</b> Ctrl+C نسخ، Ctrl+Z تراجع، Ctrl+Shift+L تفعيل الفلتر، Ctrl+السهم للقفز لنهاية البيانات.</li>
+</ul>
+<p>احرص أن تكون بياناتك منظمة: عمود لكل نوع معلومة، وصف واحد لكل سجل، بدون صفوف أو أعمدة فارغة في المنتصف، وبدون دمج الخلايا داخل البيانات، لأن هذا يسهّل لاحقاً الفرز والتصفية والجداول المحورية.</p>
+</section>
+
+<section class="lesson" id="l2">
+<h2><span class="num">2</span>الصيغ الأساسية</h2>
+<p>كل صيغة تبدأ بعلامة يساوي (=). يمكنك الحساب المباشر <code>=5*8</code> لكن الأقوى أن تشير إلى خلايا: <code>=B2*C2</code> فتتحدث النتيجة تلقائياً عند تغيير أي رقم.</p>
+<p>الدوال الإحصائية الأولى:</p>
+<pre><code>=SUM(B2:B10)      مجموع
+=AVERAGE(B2:B10)  متوسط
+=MAX(B2:B10)      أكبر قيمة
+=MIN(B2:B10)      أصغر قيمة
+=COUNT(B2:B10)    عدد الخلايا الرقمية</code></pre>
+<p>عند نسخ صيغة إلى خلية أخرى تتغير مراجعها نسبياً، فـ <code>=B2*C2</code> تصبح <code>=B3*C3</code> في الصف الأسفل، وهذا غالباً المطلوب. أما إذا أردت تثبيت خلية (مثل نسبة ضريبة في خلية واحدة) فاستخدم المرجع المطلق بعلامة الدولار: <code>=B2*$F$1</code>. اضغط F4 أثناء كتابة المرجع لتبديل التثبيت.</p>
+<p>إذا ظهر خطأ فمعناه غالباً: #DIV/0! قسمة على صفر، #NAME? اسم دالة خاطئ، #REF! مرجع محذوف، #VALUE! نوع بيانات غير مناسب.</p>
+</section>
+
+<section class="lesson" id="l3">
+<h2><span class="num">3</span>دوال الشروط والبحث</h2>
+<p>دالة IF تعطي نتيجة حسب شرط:</p>
+<pre><code>=IF(B2&gt;=60, "ناجح", "راسب")</code></pre>
+<p>ويمكن جمع الشروط بـ AND وOR. وللعدّ والجمع حسب شرط:</p>
+<pre><code>=COUNTIF(C2:C100, "بغداد")          عدد الصفوف التي المدينة فيها بغداد
+=SUMIF(C2:C100, "بغداد", D2:D100)   مجموع المبيعات لبغداد فقط</code></pre>
+<p>أما البحث عن قيمة في جدول آخر فأشهر دوالها VLOOKUP، والأحدث والأسهل XLOOKUP المتوفرة في النسخ الحديثة:</p>
+<pre><code>=XLOOKUP(A2, الأكواد, الأسعار)
+=VLOOKUP(A2, A:C, 3, FALSE)</code></pre>
+<p>في VLOOKUP الرقم 3 هو ترتيب العمود المطلوب، والقيمة FALSE تعني مطابقة تامة، وهي الحالة الأكثر أماناً. من أهم قواعد الجودة أن تتأكد أن القيم المطابقة مكتوبة بنفس الطريقة (مسافات زائدة تفسد البحث، ويمكن إزالتها بدالة TRIM).</p>
+</section>
+
+<section class="lesson" id="l4">
+<h2><span class="num">4</span>الفرز والتصفية والجداول المحورية</h2>
+<p>الفرز (Sort) يرتب البيانات تصاعدياً أو تنازلياً، والفلتر (Filter) يعرض الصفوف التي تهمك فقط دون حذف الباقي. فعّلهما من تبويب البيانات.</p>
+<p>الجدول المحوري (PivotTable) هو أقوى أداة لتلخيص آلاف الصفوف في ثوانٍ. طريقة إنشائه: حدد أي خلية في بياناتك، ثم من تبويب إدراج اختر PivotTable. ستظهر قائمة بالحقول، اسحبها إلى أربع مناطق:</p>
+<ul>
+<li><b>الصفوف:</b> مثل المدينة أو المنتج.</li>
+<li><b>الأعمدة:</b> مثل الشهر.</li>
+<li><b>القيم:</b> الأرقام التي نجمعها أو نعدّها، مثل المبيعات.</li>
+<li><b>عوامل التصفية:</b> لتقييد التقرير كله بقيمة محددة.</li>
+</ul>
+<p>مثال: لديك 5000 صف مبيعات. بسحب "المنتج" إلى الصفوف و"المبيعات" إلى القيم تحصل فوراً على مجموع كل منتج، ويمكنك بعدها إدراج رسم بياني محوري بنقرة واحدة. تذكّر تحديث الجدول المحوري (Refresh) بعد تعديل البيانات الأصلية.</p>
+</section>
+
+  <div class="finish">
+    <h2>أنهيت الكورس؟</h2>
+    <p>أحسنت. ثبّت ما تعلمته بتطبيق عملي صغير، ثم إن أحببت اختبر نفسك بالأسئلة التالية. الاختبار اختياري.</p>
+    <div class="actions">
+      <button id="doneBtn" class="btn ghost" type="button">تمت قراءة الكورس ✓</button>
+      <button id="startQuiz" class="btn" type="button">ابدأ الاختبار (اختياري)</button>
+    </div>
+  </div>
+  <section id="quizBox" class="quiz" hidden aria-live="polite"></section>
+
+  <aside class="more">
+    <h2>كورسات أخرى قد تهمك</h2>
+    <ul class="plain more-list"><li><a href="course-python.html">🐍 بايثون من الصفر للمبتدئين</a></li><li><a href="course-javascript.html">⚡ جافاسكربت للمبتدئين</a></li><li><a href="course-english.html">🗣️ الإنجليزية: أساسيات المحادثة اليومية</a></li><li><a href="course-html.html">🧱 HTML: بناء أول صفحة ويب</a></li><li><a href="course-css.html">🎨 CSS: تصميم صفحات جميلة ومتجاوبة</a></li><li><a href="course-forex.html">💹 أساسيات الفوركس وإدارة المخاطر</a></li><li><a href="course-marketing.html">📈 التسويق الرقمي: من الفكرة إلى القياس</a></li></ul>
+  </aside>
+</article>
+</main>
+<script>window.QUIZ=[{"q": "بماذا تبدأ أي صيغة في إكسل؟", "o": ["#", "=", "@", "$"], "a": 1, "e": "الصيغ تبدأ دائماً بعلامة يساوي."}, {"q": "ماذا يعني المرجع $A$1؟", "o": ["مرجع نسبي", "مرجع مطلق ثابت عند النسخ", "نطاق", "خطأ"], "a": 1, "e": "علامات الدولار تثبّت العمود والصف عند النسخ."}, {"q": "أي دالة تجمع القيم التي تحقق شرطاً؟", "o": ["SUM", "COUNT", "SUMIF", "MAX"], "a": 2, "e": "SUMIF تجمع القيم المطابقة لشرط محدد."}, {"q": "ما استخدام الجدول المحوري؟", "o": ["رسم الصور", "تلخيص وتحليل كمية كبيرة من البيانات بسرعة", "حماية الملف", "طباعة فقط"], "a": 1, "e": "هو أداة تجميع وتلخيص سريعة للبيانات."}, {"q": "ماذا تعني #DIV/0! ؟", "o": ["اسم دالة خطأ", "قسمة على صفر", "مرجع محذوف", "نوع بيانات خطأ"], "a": 1, "e": "ظهرت قسمة على صفر أو خلية فارغة."}];</script>
+
+<footer class="site-footer">
+  <div class="wrap foot-grid">
+    <div>
+      <div class="foot-brand">freecoursee</div>
+      <p class="muted">منصة دروس مجانية مكتوبة بالعربية، مع اختبارات اختيارية لقياس فهمك.</p>
+    </div>
+    <div>
+      <div class="foot-title">روابط</div>
+      <ul class="plain">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">عن الموقع</a></li>
+        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+        <li><a href="privacy.html#contact">اتصل بنا</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap copy">© 2026 freecoursee — جميع الحقوق محفوظة</div>
+</footer>
+<script src="app.js" defer></script>
+</body>
+</html>
